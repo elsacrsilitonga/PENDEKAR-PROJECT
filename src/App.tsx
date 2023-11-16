@@ -4,10 +4,10 @@ import Login from './containers/login/login';
 import Register from './containers/register/register';
 import { useStore } from './store';
 
-interface UserData {
-  email: string;
-  password: string;
-}
+// interface UserData {
+//   email: string;
+//   password: string;
+// }
 
 const App: Component = () => {
   const [{ sessionStore }] = useStore();
@@ -36,10 +36,10 @@ const App: Component = () => {
     }
   });
 
-  function getPagebyAccess() {
-    const userDataString = sessionStore.sessionData as unknown as string; // Ensure sessionData is a string
-    const userData = JSON.parse(userDataString) as UserData; // Parse the JSON string to an object
-  }
+  // function getPagebyAccess() {
+  //   const userDataString = sessionStore.sessionData as unknown as string; // Ensure sessionData is a string
+  //   const userData = JSON.parse(userDataString) as UserData; // Parse the JSON string to an object
+  // }
 
   return (
     <>
