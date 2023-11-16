@@ -1,6 +1,5 @@
 import { createSignal, Component, onCleanup } from "solid-js";
 import "./login.css";
-import { A } from "@solidjs/router";
 import "@fortawesome/fontawesome-free/css/all.css";
 
 const Login: Component = () => {
@@ -88,7 +87,7 @@ const Login: Component = () => {
         </div>
         <div class="flex flex-col p-4 gap-8 mx-auto pr-8 w-4/5 items-center justify-center">
           <p class="text-wrapper-12 self-start">Masuk</p>
-          <div class='password-toggle w-full'>
+          <div class="password-toggle w-full">
             <input
               type="text"
               class="overlap-5 p-2 w-full"
@@ -108,7 +107,7 @@ const Login: Component = () => {
               onInput={(e) => setPassword(e.target.value)}
             />
             <i
-              class={`fas ${showPassword() ? 'fa-eye' : 'fa-eye-slash'}`}
+              class={`fas ${showPassword() ? "fa-eye" : "fa-eye-slash"}`}
               onClick={() => setShowPassword(!showPassword())}
             ></i>
           </div>
