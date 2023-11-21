@@ -1,5 +1,6 @@
 import { createSignal, Component, onCleanup } from "solid-js";
 import "./login.css";
+// import { A } from "@solidjs/router";
 import "@fortawesome/fontawesome-free/css/all.css";
 
 const Login: Component = () => {
@@ -27,10 +28,10 @@ const Login: Component = () => {
   });
 
   return (
-    <div class="flex lg:flex-row flex-col">
+    <div class="flex lg:flex-row flex-col h-[100vh]">
       <div class="res-atas flex flex-col lg:gap-16 lg:w-1/2 lg:overflow-hidden w-full p-2">
         <div class="flex sm:flex-row flex-col w-full justify-between mx-auto my-4 ">
-          <div class="flex flex-row gap-4 items-center justify-center mb-4">
+          <div class="flex flex-row gap-4 items-center justify-center mb-4 ml-4">
             <img
               class="business-education"
               src="src/assets/img/business-education-logo-2.png"
@@ -39,7 +40,7 @@ const Login: Component = () => {
             <div class="flex flex-col gap-1 justify-center">
               <div class="text-wrapper-1">PENDEKAR</div>
               <div class="text-wrapper-2">
-                Pojok Education
+                Pojok Education 
                 <br />
                 Career Scholarship
               </div>
@@ -87,7 +88,7 @@ const Login: Component = () => {
         </div>
         <div class="flex flex-col p-4 gap-8 mx-auto pr-8 w-4/5 items-center justify-center">
           <p class="text-wrapper-12 self-start">Masuk</p>
-          <div class="password-toggle w-full">
+          <div class='password-toggle w-full mr-3'>
             <input
               type="text"
               class="overlap-5 p-2 w-full"
@@ -97,7 +98,7 @@ const Login: Component = () => {
               onInput={(e) => setUsername(e.target.value)}
             />
           </div>
-          <div class="password-toggle w-full">
+          <div class="password-toggle w-full mr-3">
             <input
               type={showPassword() ? "text" : "password"}
               class="overlap-5 p-2 w-full"
@@ -107,7 +108,7 @@ const Login: Component = () => {
               onInput={(e) => setPassword(e.target.value)}
             />
             <i
-              class={`fas ${showPassword() ? "fa-eye" : "fa-eye-slash"}`}
+              class={`fas ${showPassword() ? 'fa-eye' : 'fa-eye-slash'}`}
               onClick={() => setShowPassword(!showPassword())}
             ></i>
           </div>

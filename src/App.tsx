@@ -2,6 +2,7 @@ import { createSignal, Component, onMount } from 'solid-js';
 import { Routes, Route, Router, useNavigate } from '@solidjs/router';
 import Login from './containers/login/login';
 import Register from './containers/register/register';
+import LandingPage from './containers/landingPage/landingPage';
 import { useStore } from './store';
 
 // interface UserData {
@@ -14,7 +15,7 @@ const App: Component = () => {
   const navigate = useNavigate();
   const [needLogin, setNeedLogin] = createSignal(true);
 
-  onMount(() => {
+  onMount(() => { 
     console.log('session ', sessionStore.sessionData);
     if (sessionStore.sessionData) {
       setNeedLogin(!needLogin());
@@ -47,6 +48,7 @@ const App: Component = () => {
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/landing_page" element={<LandingPage />} />
           {/* <Route
             path="/"
             element={!needLogin() ? getPageByAccess() : <Login />}

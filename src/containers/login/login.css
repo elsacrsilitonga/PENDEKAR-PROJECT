@@ -8,7 +8,7 @@
   width: 100%;
 }
 
-html{
+/* html{
   overflow: hidden;
 }
 
@@ -16,7 +16,7 @@ html{
   html{
     overflow: auto;
   }
-}
+} */
 
 p{
   margin: 0;
@@ -30,11 +30,11 @@ p{
   background-color: #fff;
 }
 
-body {
+/* body {
   background: linear-gradient(to right, #2F86EE 45%, #00B8FF 50%, #fff 50%);
   display: flex;
   align-items: flex-start;
-}
+} */
 
 .text-wrapper {
   font-family: 'Poppins', sans-serif;

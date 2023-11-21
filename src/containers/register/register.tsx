@@ -10,7 +10,7 @@ const Register: Component = () => {
     <div class="flex lg:flex-row flex-col">
       <div class="res-atas flex flex-col lg:gap-16 lg:w-1/2 lg:overflow-hidden w-full p-2">
         <div class="flex sm:flex-row flex-col w-full justify-between mx-auto my-4 ">
-          <div class="flex flex-row gap-4 items-center justify-center mb-4">
+          <div class="flex flex-row gap-4 items-center justify-center mb-4 ml-4">
             <img
               class="business-education"
               src="src/assets/img/business-education-logo-2.png"
@@ -67,7 +67,7 @@ const Register: Component = () => {
         </div>
           <div class="flex flex-col p-4 gap-8 mx-auto pr-8 w-4/5 items-center justify-center">
             <p class="text-wrapper-12 self-start">Register</p>
-        <div class="password-toggle w-full">
+        <div class="password-toggle w-full mr-3">
 
             <input
               type="text"
@@ -78,7 +78,7 @@ const Register: Component = () => {
               onInput={(e) => setNama(e.target.value)}
             />
             </div>
-            <div class="password-toggle w-full">
+            <div class="password-toggle w-full mr-3">
               <input
                 type={showPassword() ? "text" : "password"}
                 class="overlap-5 p-2 w-full"
