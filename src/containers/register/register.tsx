@@ -7,7 +7,7 @@ const Register: Component = () => {
   const [showPassword, setShowPassword] = createSignal(false);
 
   return (
-    <div class="flex lg:flex-row flex-col">
+    <div class="flex lg:flex-row flex-col h-[100vh]">
       <div class="res-atas flex flex-col lg:gap-16 lg:w-1/2 lg:overflow-hidden w-full p-2">
         <div class="flex sm:flex-row flex-col w-full justify-between mx-auto my-4 ">
           <div class="flex flex-row gap-4 items-center justify-center mb-4 ml-4">

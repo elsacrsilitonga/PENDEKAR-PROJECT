@@ -43,7 +43,7 @@ const LandingPage: Component = () => {
       <div class="bg-white">
         <div class="flex flex-row">
           <div class="pendekar flex flex-col pl-8 pb-4 items-start justify-center">
-            <div class="flex flex-row">
+            <div class="flex flex-row justify-between">
               <div class="flex flex-col">
                 <div class="pendekar1 flex flex-row items-center gap-8">
                   Kita adalah <div class="horizontalLine w-[300px]"></div>
@@ -62,7 +62,7 @@ const LandingPage: Component = () => {
               <div>
                 <img
                   src="src/assets/img/supermen.gif"
-                  class="w-[900px] h-[500px] absolute mt-40 ml-40"
+                  class="w-[550px] h-[300px] absolute mt-40 left-0 ml-[50%]"
                 />
               </div>
             </div>
@@ -127,7 +127,7 @@ const LandingPage: Component = () => {
           Website #1 Mahasiswa & Fresh Graduate
         </div>
         <div class="flex flex-row gap-6 p-12 justify-center items-center flex-wrap  ">
-          <div class="rectangle p-4 gap-3">
+          <div class="rectangle1 p-4 gap-3">
             <div class="flex items-center gap-2">
               <img src="src/assets/img/Pengguna.png" alt="" />
               <div class="text1">Pengguna</div>
@@ -136,7 +136,7 @@ const LandingPage: Component = () => {
               5.000.000+ pengguna sudah bergabung menjadi bagian PENDEKAR.
             </div>
           </div>
-          <div class="rectangle p-4 gap-3">
+          <div class="rectangle1 p-4 gap-3">
             <div class="flex items-center gap-2">
               <img src="src/assets/img/Event.png" alt="" />
               <div class="text1">Event</div>
@@ -146,7 +146,7 @@ const LandingPage: Component = () => {
               dsb). Kamu bisa upload dan promosi event juga, lho!
             </div>
           </div>
-          <div class="rectangle p-4 gap-3">
+          <div class="rectangle1 p-4 gap-3">
             <div class="flex items-center gap-2">
               <img src="src/assets/img/Beasiswa.png" alt="" />
               <div class="text1">Beasiswa</div>
@@ -156,7 +156,7 @@ const LandingPage: Component = () => {
               berbagai kegiatanmu!
             </div>
           </div>
-          <div class="rectangle p-4 gap-3">
+          <div class="rectangle1 p-4 gap-3">
             <div class="flex items-center gap-2">
               <img src="src/assets/img/Lowongan.png" alt="" />
               <div class="text1">Lowongan Kerja</div>
@@ -166,7 +166,7 @@ const LandingPage: Component = () => {
               PENDEKAR
             </div>
           </div>
-          <div class="rectangle p-4 gap-3">
+          <div class="rectangle1 p-4 gap-3">
             <div class="flex items-center gap-2">
               <img src="src/assets/img/User Friendly.png" alt="" />
               <div class="text1">User Friendly</div>
@@ -176,7 +176,7 @@ const LandingPage: Component = () => {
               memahami keinginan user kami.
             </div>
           </div>
-          <div class="rectangle p-4 gap-3">
+          <div class="rectangle1 p-4 gap-3">
             <div class="flex items-center gap-2">
               <img src="src/assets/img/Dashboard Activity.png" alt="" />
               <div class="text1">Dashboard Activity</div>
@@ -202,7 +202,7 @@ const LandingPage: Component = () => {
 
         <div class="flex flex-row flex-wrap gap-4 justify-center items-center">
           <div class="kataMereka p-8 m-8 ">
-            <img src="src/assets/img/pp.png" class="absolute -mt-22 ml-22 pp" />
+            <img src="src/assets/img/pp.png" class="-mt-22 ml-[31%] pp" />
             <div class="text3 text-center mt-10">
               “BSC merupakan program anti-mainstream. Tidak hanya memberi dana,
               program ini mampu mengembangkan jejaring penerima beasiswa lewat
@@ -218,7 +218,7 @@ const LandingPage: Component = () => {
             </div>
           </div>
           <div class="kataMereka p-8 m-8 ">
-            <img src="src/assets/img/pp.png" class="absolute -mt-22 ml-22 pp" />
+            <img src="src/assets/img/pp.png" class="-mt-22 ml-[33%] pp" />
             <div class="text3 text-center mt-10">
               “BSC merupakan program anti-mainstream. Tidak hanya memberi dana,
               program ini mampu mengembangkan jejaring penerima beasiswa lewat
