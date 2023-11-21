@@ -62,7 +62,7 @@ const LandingPage: Component = () => {
               <div>
                 <img
                   src="src/assets/img/supermen.gif"
-                  class="w-[550px] h-[300px] absolute mt-40 left-0 ml-[50%]"
+                  class="w-[700px] h-[400px] absolute mt-40 left-0 ml-[50%]"
                 />
               </div>
             </div>
@@ -191,7 +191,7 @@ const LandingPage: Component = () => {
       <div class="judul2 flex justify-center p-4">
         Siap Mengikuti Beragam Challenge Ini?
       </div>
-      <div class="subjudul2_1 flex justify-center pt-2">
+      <div class="subjudul2_1 flex justify-center p-2">
         Kamu akan ditantang untuk menunjukkan semangat mengasah ilmu dan masa
         depan sesuai minat kamu
       </div>
