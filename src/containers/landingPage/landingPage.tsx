@@ -62,7 +62,7 @@ const LandingPage: Component = () => {
               <div>
                 <img
                   src="src/assets/img/supermen.gif"
-                  class="w-[700px] h-[400px] absolute mt-40 left-0 ml-[50%]"
+                  class="w-[500px] h-[400px] absolute mt-40 left-0 ml-[60%]"
                 />
               </div>
             </div>
