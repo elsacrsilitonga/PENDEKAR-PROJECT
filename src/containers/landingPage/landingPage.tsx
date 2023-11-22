@@ -1,7 +1,52 @@
-import { Component } from "solid-js";
+import { createSignal, onCleanup, Component, createMemo } from "solid-js";
 import "./landingPage.css";
 
 const LandingPage: Component = () => {
+  const [searchTerm, setSearchTerm] = createSignal('');
+  const inputRef = createMemo(() => ({ current: null as HTMLInputElement | null }));
+
+  const startSearch = () => {
+    const searchValue = searchTerm();
+
+    // Implement logika pencarian di sini
+    if (searchValue.trim() !== '') {
+      const matchingElements = Array.from(document.querySelectorAll('*')).filter(
+        (element) => element.textContent && element.textContent.includes(searchValue)
+      );
+      
+      if (matchingElements.length > 0) {
+        console.log(`Found matching elements for "${searchValue}":`);
+        matchingElements.forEach((element) => {
+          console.log(element.textContent);
+        });
+
+        // Fokus pada elemen pertama yang cocok dan scroll ke elemen tersebut
+        const lastMatch = matchingElements[matchingElements.length - 1] as HTMLElement;
+        lastMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        console.log(`No matching elements found for "${searchValue}"`);
+      }
+    } else {
+      console.log('Please enter a search term.');
+    }
+  };
+
+  const handleInputChange = (event: Event) => {
+    const input = event.target as HTMLInputElement;
+    setSearchTerm(input.value);
+  };
+
+  const handleKeyPress = (event: KeyboardEvent) => {
+    if (event.key === 'Enter') {
+      startSearch();
+    }
+  };
+
+  // Membersihkan inputRef pada komponen unmount
+  onCleanup(() => {
+    inputRef().current = null;
+  });
+
   return (
     <div class="overflow-x-hidden">
       <div class="nav fixed w-full z-20 top-0 flex justify-start">
@@ -21,18 +66,32 @@ const LandingPage: Component = () => {
               </div>
             </div>
             <div class="flex flex-row gap-12 px-4 items-center justify-center text-wrapper">
-              <p>Tentang Kami</p>
-              <p>Program</p>
-              <p>Testimoni</p>
+              <p>
+                <a href="#tentangKami">Tentang Kami</a>
+              </p>
+              <p>
+                <a href="#program">Program</a>
+              </p>
+              <p>
+                <a href="#testimoni">Testimoni</a>
+              </p>
             </div>
           </div>
           <div class="flex flex-row gap-6 items-center justify-center mr-4">
             <input
+              ref={inputRef}
+              value={searchTerm()}
+              onInput={handleInputChange}
+              onKeyPress={handleKeyPress}
+              id="searchInput"
               type="text"
               placeholder="Search Anything"
               class="search px-2 text-black"
             />
-            <i class="fas fa-search text-black text-opacity-50 text-lg cursor-pointer absolute ml-11"></i>
+            <i
+              onClick={() => startSearch()}
+              class="fas fa-search text-black text-opacity-50 text-lg cursor-pointer absolute ml-11"
+            ></i>
             <button class="button-login flex flex-cols justify-center items-center">
               <div class="text-lg">Login</div>
               <i class="fas fa-arrow-right text-white pl-2 pt-1 text-lg cursor-pointer"></i>
@@ -122,7 +181,7 @@ const LandingPage: Component = () => {
           </div>
         </div>
       </div>
-      <div class="flex flex-col p-4 bg-[#EFF6FE]">
+      <div id="tentangKami" class="flex flex-col p-4 bg-[#EFF6FE] pt-18">
         <div class="judul1 flex justify-center">
           Website #1 Mahasiswa & Fresh Graduate
         </div>
@@ -194,14 +253,17 @@ const LandingPage: Component = () => {
           </div>
         </div>
       </div>
-      <div class="judul2 flex justify-center p-4">
+      <div id="program" class="judul2 flex justify-center px-4 pb-4 pt-18">
         Siap Mengikuti Beragam Challenge Ini?
       </div>
       <div class="subjudul2_1 flex justify-center p-2">
         Kamu akan ditantang untuk menunjukkan semangat mengasah ilmu dan masa
         depan sesuai minat kamu
       </div>
-      <div class="bg-[#0082FF] flex flex-col mt-16 p-8 items-center justify-center">
+      <div
+        id="testimoni"
+        class="bg-[#0082FF] flex flex-col pt-16 p-8 items-center justify-center"
+      >
         <div class="judul3 mb-20">
           Apa Kata Mereka Tentang PENDEKAR #BeAWinner
         </div>
