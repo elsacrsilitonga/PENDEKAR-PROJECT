@@ -73,7 +73,7 @@ const Login: Component = () => {
         <br />
       </div>
       <div class="res-bawah flex flex-col lg:w-1/2 w-full gap-2 p-2">
-        <div class="flex flex-row gap-6 items-center p-6 items-center">
+        <div class="flex flex-row gap-6 items-center px-6 pt-6 items-center">
           <img
             class="img"
             src="src/assets/img/business-education-logo-2-59B.png"
@@ -86,9 +86,9 @@ const Login: Component = () => {
             </div>
           </div>
         </div>
-        <div class="flex flex-col p-4 gap-8 mx-auto pr-8 w-4/5 items-center justify-center">
+        <div class="flex flex-col p-4 gap-8 mx-auto pr-8 w-4/5 h-full items-center justify-center">
           <p class="text-wrapper-12 self-start">Masuk</p>
-          <div class='password-toggle w-full mr-3'>
+          <div class='password-toggle w-36/37 mr-4'>
             <input
               type="text"
               class="overlap-5 p-2 w-full"
@@ -98,7 +98,7 @@ const Login: Component = () => {
               onInput={(e) => setUsername(e.target.value)}
             />
           </div>
-          <div class="password-toggle w-full mr-3">
+          <div class="password-toggle w-36/37 mr-4">
             <input
               type={showPassword() ? "text" : "password"}
               class="overlap-5 p-2 w-full"

@@ -132,6 +132,7 @@ const LandingPage: Component = () => {
               <img src="src/assets/img/Pengguna.png" alt="" />
               <div class="text1">Pengguna</div>
             </div>
+            <br />
             <div class="text2">
               5.000.000+ pengguna sudah bergabung menjadi bagian PENDEKAR.
             </div>
@@ -141,6 +142,7 @@ const LandingPage: Component = () => {
               <img src="src/assets/img/Event.png" alt="" />
               <div class="text1">Event</div>
             </div>
+            <br />
             <div class="text2">
               Daftar ke 2,000+ event pilihan (webinar, lomba, volunteering,
               dsb). Kamu bisa upload dan promosi event juga, lho!
@@ -151,6 +153,7 @@ const LandingPage: Component = () => {
               <img src="src/assets/img/Beasiswa.png" alt="" />
               <div class="text1">Beasiswa</div>
             </div>
+            <br />
             <div class="text2">
               1000+ info beasiswa dengan berbagai benefit untuk menunjang
               berbagai kegiatanmu!
@@ -161,6 +164,7 @@ const LandingPage: Component = () => {
               <img src="src/assets/img/Lowongan.png" alt="" />
               <div class="text1">Lowongan Kerja</div>
             </div>
+            <br />
             <div class="text2">
               Siapkan masa depanmu dengan ikut lowongan kerja dari aplikasi
               PENDEKAR
@@ -171,6 +175,7 @@ const LandingPage: Component = () => {
               <img src="src/assets/img/User Friendly.png" alt="" />
               <div class="text1">User Friendly</div>
             </div>
+            <br />
             <div class="text2">
               Dengan mendengar suara dari beberapa user kami, kami berusaha
               memahami keinginan user kami.
@@ -181,6 +186,7 @@ const LandingPage: Component = () => {
               <img src="src/assets/img/Dashboard Activity.png" alt="" />
               <div class="text1">Dashboard Activity</div>
             </div>
+            <br />
             <div class="text2">
               Terdapat dashboard yang dapat digunakan untuk menunjang melihat
               aktifitas kamu di website PENDEKAR ini, lho!
@@ -203,6 +209,22 @@ const LandingPage: Component = () => {
         <div class="flex flex-row flex-wrap gap-4 justify-center items-center">
           <div class="kataMereka p-8 m-8 ">
             <img src="src/assets/img/pp.png" class="-mt-22 ml-[31%] pp" />
+            <div class="text3 text-center mt-10">
+              “BSC merupakan program anti-mainstream. Tidak hanya memberi dana,
+              program ini mampu mengembangkan jejaring penerima beasiswa lewat
+              kegiatan diskusi dan grup virtual. Sangat bersyukur bisa menjadi
+              penerima dan saya merekomendasikan program ini ke seluruh pelajar
+              Indonesia!”
+            </div>
+            <div class="horizontalLine1 w-[150px] mx-auto my-4"></div>
+            <div class="flex flex-col items-center justify-center">
+              <div class="text4">Bae Suci Istiqomah</div>
+              <div class="text5">UPN Veteran Jakarta</div>
+              <div class="text5">Awardee BSC 2021</div>
+            </div>
+          </div>
+          <div class="kataMereka p-8 m-8 ">
+            <img src="src/assets/img/pp.png" class="-mt-22 ml-[33%] pp" />
             <div class="text3 text-center mt-10">
               “BSC merupakan program anti-mainstream. Tidak hanya memberi dana,
               program ini mampu mengembangkan jejaring penerima beasiswa lewat
