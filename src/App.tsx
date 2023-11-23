@@ -2,6 +2,7 @@ import { createSignal, Component, onMount } from 'solid-js';
 import { Routes, Route, Router, useNavigate } from '@solidjs/router';
 import Login from './containers/login/login';
 import Register from './containers/register/register';
+import Dashboard from './containers/dashboard/dashboard';
 import LandingPage from './containers/landingPage/landingPage';
 import { useStore } from './store';
 
@@ -46,9 +47,10 @@ const App: Component = () => {
     <>
       <Router>
         <Routes>
+          <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/" element={<LandingPage />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           {/* <Route
             path="/"
             element={!needLogin() ? getPageByAccess() : <Login />}
