@@ -10,6 +10,7 @@ const Register: Component = () => {
     <div class="flex lg:flex-row flex-col min-h-[100vh] h-fit">
       <div class="res-atas flex flex-col lg:gap-16 lg:w-1/2 lg:overflow-hidden w-full p-2">
         <div class="flex sm:flex-row flex-col w-full justify-between mx-auto my-4 ">
+          <a href="/">
           <div class="flex flex-row gap-4 items-center justify-center mb-4 ml-4">
             <img
               class="business-education"
@@ -19,16 +20,17 @@ const Register: Component = () => {
             <div class="flex flex-col gap-1 justify-center">
               <div class="text-wrapper-1">PENDEKAR</div>
               <div class="text-wrapper-2">
-                Pojok Education
+                Pojok Education 
                 <br />
                 Career Scholarship
               </div>
             </div>
           </div>
+          </a>
           <div class="flex flex-row lg:gap-3 xl:gap-12 gap-12 items-start justify-center text-wrapper mr-14 ml-8">
-            <p>Tentang Kami</p>
-            <p>Program</p>
-            <p>Testimoni</p>
+            <p><a href="/#tentangKami">Tentang Kami</a></p>
+            <p><a href="/#program">Program</a></p>
+            <p><a href="/#testimoni">Testimoni</a></p>
           </div>
         </div>
         <div class="rectangle p-6 m-auto">
@@ -151,7 +153,7 @@ const Register: Component = () => {
           <p class="belum-punya-akun">
             <span class="text-wrapper-14">Sudah punya akun? </span>{" "}
             <span class="text-wrapper-15">
-              <a href="/login">Login </a>
+              <a href="/login" id="auth">Login </a>
             </span>
           </p>
         </div>

@@ -2,18 +2,23 @@ import { createSignal, onCleanup, Component, createMemo } from "solid-js";
 import "./landingPage.css";
 
 const LandingPage: Component = () => {
-  const [searchTerm, setSearchTerm] = createSignal('');
-  const inputRef = createMemo(() => ({ current: null as HTMLInputElement | null }));
+  const [searchTerm, setSearchTerm] = createSignal("");
+  const inputRef = createMemo(() => ({
+    current: null as HTMLInputElement | null,
+  }));
 
   const startSearch = () => {
     const searchValue = searchTerm();
 
     // Implement logika pencarian di sini
-    if (searchValue.trim() !== '') {
-      const matchingElements = Array.from(document.querySelectorAll('*')).filter(
-        (element) => element.textContent && element.textContent.includes(searchValue)
+    if (searchValue.trim() !== "") {
+      const matchingElements = Array.from(
+        document.querySelectorAll("*")
+      ).filter(
+        (element) =>
+          element.textContent && element.textContent.includes(searchValue)
       );
-      
+
       if (matchingElements.length > 0) {
         console.log(`Found matching elements for "${searchValue}":`);
         matchingElements.forEach((element) => {
@@ -21,13 +26,15 @@ const LandingPage: Component = () => {
         });
 
         // Fokus pada elemen pertama yang cocok dan scroll ke elemen tersebut
-        const lastMatch = matchingElements[matchingElements.length - 1] as HTMLElement;
-        lastMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        const lastMatch = matchingElements[
+          matchingElements.length - 1
+        ] as HTMLElement;
+        lastMatch.scrollIntoView({ behavior: "smooth", block: "center" });
       } else {
         console.log(`No matching elements found for "${searchValue}"`);
       }
     } else {
-      console.log('Please enter a search term.');
+      console.log("Please enter a search term.");
     }
   };
 
@@ -37,7 +44,7 @@ const LandingPage: Component = () => {
   };
 
   const handleKeyPress = (event: KeyboardEvent) => {
-    if (event.key === 'Enter') {
+    if (event.key === "Enter") {
       startSearch();
     }
   };
@@ -52,19 +59,21 @@ const LandingPage: Component = () => {
       <div class="nav fixed w-full z-20 top-0 flex justify-start">
         <div class="flex flex-row w-full justify-between mx-auto py-4">
           <div class="flex flex-row gap-4 items-center justify-center ml-4">
-            <img
-              class="business-education"
-              src="src/assets/img/business-education-logo-2.png"
-            />
-            <div class="vertical-line"></div>
-            <div class="flex flex-col gap-1 justify-center">
-              <div class="text-wrapper-1">PENDEKAR</div>
-              <div class="text-wrapper-2">
-                Pojok Education
-                <br />
-                Career Scholarship
+            <a href="/" class="flex flex-row gap-4 items-center justify-center ml-4">
+              <img
+                class="business-education"
+                src="src/assets/img/business-education-logo-2.png"
+              />
+              <div class="vertical-line"></div>
+              <div class="flex flex-col gap-1 justify-center">
+                <div class="text-wrapper-1">PENDEKAR</div>
+                <div class="text-wrapper-2">
+                  Pojok Education
+                  <br />
+                  Career Scholarship
+                </div>
               </div>
-            </div>
+            </a>
             <div class="flex flex-row gap-12 px-4 items-center justify-center text-wrapper">
               <p>
                 <a href="#tentangKami">Tentang Kami</a>
@@ -92,10 +101,12 @@ const LandingPage: Component = () => {
               onClick={() => startSearch()}
               class="fas fa-search text-black text-opacity-50 text-lg cursor-pointer absolute ml-11"
             ></i>
-            <button class="button-login flex flex-cols justify-center items-center">
-              <div class="text-lg">Login</div>
-              <i class="fas fa-arrow-right text-white pl-2 pt-1 text-lg cursor-pointer"></i>
-            </button>
+            <a href="/login">
+              <button class="button-login flex flex-cols justify-center items-center">
+                <div class="text-lg">Login</div>
+                <i class="fas fa-arrow-right text-white pl-2 pt-1 text-lg cursor-pointer"></i>
+              </button>
+            </a>
           </div>
         </div>
       </div>

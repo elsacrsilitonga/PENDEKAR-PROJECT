@@ -48,7 +48,7 @@ const App: Component = () => {
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/landing_page" element={<LandingPage />} />
+          <Route path="/" element={<LandingPage />} />
           {/* <Route
             path="/"
             element={!needLogin() ? getPageByAccess() : <Login />}
