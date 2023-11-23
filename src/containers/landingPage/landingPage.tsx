@@ -56,7 +56,7 @@ const LandingPage: Component = () => {
 
   return (
     <div class="overflow-x-hidden">
-      <div class="nav fixed w-full z-20 top-0 flex justify-start">
+      <div class="nav fixed w-full z-20 top-0 flex justify-start opacity-90">
         <div class="flex flex-row w-full justify-between mx-auto py-4">
           <div class="flex flex-row gap-4 items-center justify-center ml-4">
             <a href="/" class="flex flex-row gap-4 items-center justify-center ml-4">
@@ -99,7 +99,7 @@ const LandingPage: Component = () => {
             />
             <i
               onClick={() => startSearch()}
-              class="fas fa-search text-black text-opacity-50 text-lg cursor-pointer absolute ml-11"
+              class="fas fa-search text-black text-opacity-50 text-lg cursor-pointer absolute ml-11 hover:text-opacity-100"
             ></i>
             <a href="/login">
               <button class="button-login flex flex-cols justify-center items-center">

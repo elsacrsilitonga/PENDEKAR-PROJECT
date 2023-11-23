@@ -120,7 +120,7 @@ const Login: Component = () => {
           <p class="belum-punya-akun">
             <span class="text-wrapper-14">Belum punya akun? </span>{" "}
             <span class="text-wrapper-15">
-              <a href="/register" id="auth">Daftar </a>
+              <a href="/register">Daftar </a>
             </span>
           </p>
         </div>

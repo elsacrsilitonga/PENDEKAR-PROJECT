@@ -103,7 +103,7 @@ const Register: Component = () => {
           </div>
           <div class="w-full mx-auto">
             <select name="" id="" class="overlap-5 p-2 w-full">
-              <option value="">semester</option>
+              <option value="">Semester</option>
               <option value="">Semester 1</option>
               <option value="">Semester 2</option>
               <option value="">Semester 3</option>
@@ -153,7 +153,7 @@ const Register: Component = () => {
           <p class="belum-punya-akun">
             <span class="text-wrapper-14">Sudah punya akun? </span>{" "}
             <span class="text-wrapper-15">
-              <a href="/login" id="auth">Login </a>
+              <a href="/login">Login </a>
             </span>
           </p>
         </div>
